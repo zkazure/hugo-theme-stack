@@ -1,0 +1,211 @@
+baseURL = 'https://zkazure.github.io/'
+languageCode = 'en-us'
+title = 'My Personal Website'
+theme = 'stack'
+
+DefaultContentlanguage = 'en'
+
+hasCjklanguage = true
+# disqusShortname = ""
+
+[config]
+[config.pagination]
+  pagerSize = 5
+
+
+[markup]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[markup.highlight]
+noClasses = false
+codeFences = true
+guessSyntax = true
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 4
+
+
+[menu]
+
+[[menu.main]]
+  pageRef = "/blog"
+  name = "Home"
+  weight = 0
+[[menu.main]]
+  pageRef = "/stem"
+  name = "STEM"
+  weight = 10
+[[menu.main]]
+  pageRef = "/cs_learn"
+  name = "CS-Learing"
+  weight = 10
+
+[[menu.social]]
+  identifier = "githbu"
+  name = "GitHub"
+  url = "https://github.com/zkazure"
+
+  
+    
+[params]
+mainSections = ["blog"]
+rssFullContent = true
+# featuredimagefield = 'image'
+favicon = "/favicon.png"
+
+[params.footer]
+since = "2025"
+customText = "To be or not to be, that's a question."
+[params.dateFormat]
+published = "Oct 24, 2025"
+lastUpdated = "Oct 24, 2025 19:19 MST"
+
+[params.sidebar]
+emoji = ""
+subtitle = "change world by code"
+[params.sidebar.avatar]
+  enabled = true
+  local = true
+  src = "img/avatar.png"
+
+[params.article]
+headingAnchor = false
+math = true
+readingTime = true
+[params.article.license]
+enabled = true
+default = "Licensed under CC BY-NC-SA 4.0"
+
+[[params.widgets.homepage]]
+  type="search"
+[[params.widgets.homepage]]
+  type = "archives"
+[params.widgets.homepage.params]
+limit = 5
+[[params.widgets.homepage]]
+type = "categories"
+[params.widgets.homepage.params]
+limit = 10
+[[params.widgets.homepage]]
+type = "tag-cloud"
+[params.widgets.homepage.params]
+limit = 10
+[[params.widgets.page]]
+  type = "toc"
+
+[params.colorScheme]
+toggle = true
+default = "auto"
+[params.imageProcessing.cover]
+enabled = true
+[params.imageprocessing.content]
+enabled = true
+
+
+[params.comments]
+enabled = true
+provider = "disqus"
+
+[params.comments.disqusjs]
+shortname = ""
+apiUrl = ""
+apiKey = ""
+admin = ""
+adminLabel = ""
+
+[params.comments.utterances]
+repo = ""
+issueTerm = "pathname"
+label = ""
+
+[params.comments.remark42]
+host = ""
+site = ""
+locale = ""
+
+[params.comments.vssue]
+platform = ""
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""
+autoCreateIssue = false
+
+[params.comments.waline]
+serverURL = ""
+lang = ""
+visitor = ""
+avatar = ""
+emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
+requiredMeta = ["name", "email", "url"]
+placeholder = ""
+
+[params.comments.waline.locale]
+admin = "Admin"
+
+[params.comments.twikoo]
+envId = ""
+region = ""
+path = ""
+lang = ""
+
+[params.comments.cactus]
+defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
+serverName = "cactus.chat"
+siteName = ""
+
+[params.comments.giscus]
+repo = ""
+repoID = ""
+category = ""
+categoryID = ""
+mapping = ""
+lightTheme = ""
+darkTheme = ""
+reactionsEnabled = 1
+emitMetadata = 0
+
+[params.comments.gitalk]
+owner = ""
+admin = ""
+repo = ""
+clientID = ""
+clientSecret = ""
+
+[params.comments.cusdis]
+host = ""
+id = ""
+
+
+[permalinks]
+post = "/p/:slug/"
+page = "/:slug/"
+
+
+[related]
+includeNewer = true
+threshold = 60
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "categories"
+weight = 200
